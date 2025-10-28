@@ -3,13 +3,13 @@ with MLflow tracking'''
 
 from __future__ import print_function
 
+
 import numpy as np
 import keras
 from keras.datasets import reuters
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Activation
-from tensorflow.keras.preprocessing.text import Tokenizer
-import mlflow
+from keras.preprocessing.text import Tokenizer
 import mlflow
 
 mlflow.set_tracking_uri("http://127.0.0.1:5000")
@@ -56,8 +56,8 @@ with mlflow.start_run():
 
     print('Convert class vector to binary class matrix '
           '(for use with categorical_crossentropy)')
-    y_train = keras.utils.to_categorical(y_train, num_classes)
-    y_test = keras.utils.to_categorical(y_test, num_classes)
+    y_train = tf.keras.utils.to_categorical(y_train, num_classes)
+    y_test = tf.keras.utils.to_categorical(y_test, num_classes)
     print('y_train shape:', y_train.shape)
     print('y_test shape:', y_test.shape)
 
