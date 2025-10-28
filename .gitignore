@@ -1,0 +1,2 @@
+# Ignore MLflow SQLite database
+data/mlflow.db
